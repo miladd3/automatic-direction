@@ -20,4 +20,4 @@ add .dir-auto class to input that you wanna automate direction on it
 ```
 ## License
 
-The code and the documentation are released under the [MIT License](LICENSE).
+The code and the documentation are released under the MIT License
