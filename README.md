@@ -1,7 +1,7 @@
 # automatic-direction
-automatic direction jquery based on character count arabic or latin
+automatic direction jquery based on character count arabic or latin.
 
-dir="auto" attribution is good but i just depend on first character thats not functional on most arabic and persian web applications
+dir="auto" attribution is good, but it just depend on first character thats not functional on most arabic and persian web applications.
 
 ## How to use
 

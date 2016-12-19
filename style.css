@@ -5,8 +5,9 @@
 
 body {
   background-color: #f2f2f2;
-  font-family: sans-serif,tahoma;
+  font-family: roboto ,sans-serif,tahoma;
   color: #555;
+  line-height: 1.4;
 }
 
 h1 {
@@ -22,13 +23,21 @@ h2 {
 p {
   margin-top: 20px;
   margin: 20px auto;
-  width: 50%;
+  padding: 10px;
+  background-color: #E5F6F7;
+  border-radius: 5px;
+  color: #2F3636;
+}
 
+p small {
+  margin-top: 10px;
+  display: block;
+  color: #647979;
 }
 
 .container {
-  max-width: 700px;
-  margin: 100px auto 0 auto;
+  max-width: 400px;
+  margin: 50px auto 0 auto;
   text-align: center;
   padding: 50px;
   background-color: #fff;
@@ -38,7 +47,7 @@ p {
 textarea {
   display: block;
   margin: 20px auto;
-  width: 50%;
+  width: 100%;
   min-width: 50%;
   max-width: 100%;
   -webkit-box-sizing: border-box;
