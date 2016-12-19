@@ -3,6 +3,8 @@ automatic direction jquery based on character count arabic or latin.
 
 dir="auto" attribution is good, but it just depend on first character thats not functional on most arabic and persian web applications.
 
+[Demo link](https://miladd3.github.io/automatic-direction/)
+
 ## How to use
 
 
