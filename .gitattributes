@@ -1,2 +1,2 @@
 $ cat .gitattributes
-linguist-language=JavaScript
+* linguist-language=JavaScript
