@@ -21,7 +21,10 @@ $(function() {
     	}else {
     		$(this).attr('dir','ltr');
     	}
-    	
-	});
 
+		//Showing character count on front-end
+    	$('.count-f').text(farsicount);
+    	$('.count-e').text(Englishcount);
+    	$('.count-all').text(allcount);
+	});
 });
