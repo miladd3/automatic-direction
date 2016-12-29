@@ -29,4 +29,4 @@ The code and the documentation are released under the MIT License
 
 By [Milad Dehghan](https://github.com/miladd3)
 
-Thanks to @sallar for converting it to Vanilla js
+Thanks to [@sallar](https://github.com/sallar) for converting it to Vanilla js
