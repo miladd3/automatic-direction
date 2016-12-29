@@ -1,30 +1,32 @@
 /*!
- * automatic Direction v1.10
+ * automatic Direction v1.2
  * By Milad Dehghan (http://dehghan.net)
  * github: https://github.com/miladd3/automatic-direction
  */
-$(function() {	
-	
-	$(".dir-auto").keyup(function(){
+window.addEventListener('load', function() {
 
-		var textareavalue = $(this).val(); //Getting input value
-		var arabic = /[\u0600-\u06FF]/g; //setting arabic unicode
-		var match = textareavalue.match(arabic); 
-		var spacesMatch = textareavalue.match(new RegExp(" ", 'g'));
-		allcount = textareavalue.length;
-		farsicount = match ? match.length : 0;
-		spacesCount = spacesMatch ? spacesMatch.length : 0;
-		Englishcount = allcount - farsicount - spacesCount;
+	var elements = [].slice.call(document.querySelectorAll('.dir-auto'));
 
-    	if (farsicount > Englishcount) {
-    		$(this).attr('dir','rtl');
-    	}else {
-    		$(this).attr('dir','ltr');
-    	}
+	elements.forEach(function(el) {
+		var farsiCountNode = el.parentNode.querySelector('.count-f'),
+			latinCountNode = el.parentNode.querySelector('.count-e'),
+			countNode = el.parentNode.querySelector('.count-all');
 
-		//Showing character count on front-end
-    	$('.count-f').text(farsicount);
-    	$('.count-e').text(Englishcount);
-    	$('.count-all').text(allcount);
+		el.addEventListener('keyup', function(e) {
+			var value = e.target.value,
+				farsiChars = value.match(/[\u0600-\u06FF]/g),
+				spaceChars = value.match(/\s/g),
+				count = value.length,
+				farsiCount = farsiChars ? farsiChars.length : 0,
+				spaceCount = spaceChars ? spaceChars.length : 0,
+				latinCount = count - farsiCount - spaceCount;
+			
+			e.target.setAttribute('dir', (farsiCount > latinCount) ? 'rtl' : 'ltr');
+
+			if(farsiCountNode) farsiCountNode.innerHTML = farsiCount;
+			if(latinCountNode) latinCountNode.innerHTML = latinCount;
+			if(countNode) countNode.innerHTML = count;
+		});
 	});
+
 });
