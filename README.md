@@ -19,9 +19,6 @@ add .dir-auto class to input that you want to automate direction on it
 ```html
 <textarea class="dir-auto" ></textarea>
 ```
-## JQuery
-This Library is **Plain Javascript** with no need of JQuery.
-but if you need jquery version of this library for any reason there is a **jquery.automatic-direction.js** with the same functionality with jquery selectors and functions.
 
 ## Licence and Credits
 
